@@ -18,6 +18,7 @@ func New(p string) *Server {
 
 func (s *Server) Run() error {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/",handlers.Home)
+	mux.HandleFunc("GET /",handlers.Home)
+	mux.HandleFunc("POST /insertbooks",handlers.Home)
 	return http.ListenAndServe(s.Addr, mux)
 }

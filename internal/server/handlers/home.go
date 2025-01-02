@@ -9,5 +9,5 @@ import (
 
 func Home(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
-	views.HomePage("")
+	views.HomePage("idk what this is").Render(context.Background(),w)
 }
