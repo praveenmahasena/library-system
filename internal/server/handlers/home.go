@@ -9,6 +9,5 @@ import (
 
 func Home(w http.ResponseWriter, r *http.Request) {
 	w.WriteHeader(http.StatusOK)
-	comp := views.TemplateName("yayaya")
-	comp.Render(context.Background(), w)
+	views.HomePage("")
 }
