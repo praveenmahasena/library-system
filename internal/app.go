@@ -1,10 +1,18 @@
 package internal
 
-import "github.com/praveenmahasena/libsys/internal/server"
+import (
+	"github.com/praveenmahasena/libsys/internal/database"
+	"github.com/praveenmahasena/libsys/internal/server"
+)
 
-func Start()error{
-	ns:=server.New(":42069")
+func Start() error {
+	dbCon, dbErr := database.Connect()
 
+	if dbErr != nil {
+		return dbErr
+	}
+
+	ns := server.New(":42069")
 
 	return ns.Run()
 }

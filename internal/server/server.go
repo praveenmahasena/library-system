@@ -18,8 +18,6 @@ func New(p string) *Server {
 
 func (s *Server) Run() error {
 	mux := http.NewServeMux()
-
 	mux.HandleFunc("/",handlers.Home)
-
 	return http.ListenAndServe(s.Addr, mux)
 }
