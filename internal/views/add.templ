@@ -1,0 +1,57 @@
+package views
+
+templ Add() {
+	@addAuthor()
+	@addCatagory()
+	@addBook()
+}
+
+templ addAuthor() {
+	<div>
+		<form>
+			<div>
+				<label>Add New Author Name</label>
+				<div>
+					<input type="text" placeholder="add new author"/>
+				</div>
+				<button>Add author</button>
+			</div>
+		</form>
+	</div>
+}
+
+templ addCatagory() {
+	<div>
+		<form>
+			<div>
+				<label>Add New Catagory</label>
+				<div>
+					<input type="text" placeholder="Add New Catagory"/>
+				</div>
+				<button>Add author</button>
+			</div>
+		</form>
+	</div>
+}
+
+templ addBook() {
+	<div>
+		<form>
+			<div>
+				<label>Book Name</label>
+				<input type="text" placeholder="add new author"/>
+			</div>
+			<div>
+				<label>Book Author</label>
+				<input type="text" placeholder="add new author"/>
+			</div>
+			<div>
+				<label>Book Catagory</label>
+				<input type="text" placeholder="add new author"/>
+			</div>
+			<div>
+				<button>Add author</button>
+			</div>
+		</form>
+	</div>
+}

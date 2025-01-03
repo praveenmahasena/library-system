@@ -42,4 +42,9 @@ server_race:
 	go build --race -o ./bin/server_race ./cmd/libsys/
 
 run:
+	templ fmt .
+	templ generate
 	go run ./cmd/libsys/
+
+fmt:
+	templ fmt .
